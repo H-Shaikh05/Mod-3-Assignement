@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SHAIKH'S HALAL FOODS</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700" rel="stylesheet" type="text/css">
+  <style>
+    .food-item {
+      background-color: #f2f2f2;
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    .navbar-nav {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    .navbar-nav li {
+      list-style: none;
+    }
+
+    .navbar-nav a {
+      display: block;
+      padding: 10px 20px;
+      background-color: #eee;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar-nav a:hover {
+      background-color: #ddd;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2em;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .read-more-content {
+      display: none;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .read-more-toggle {
+      color: #007BFF;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>SHAIKH'S HALAL FOODS</h1>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="mobile-menu">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Table</a></li>
+            <li><a href="#">Windows</a></li>
+            <li><a href="#">Order</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="text-center">Our Menu</h1>
+    <div class="row">
+      <div class="col-md-4 food-item">
+        <h2>Chicken</h2>
+        <p>Our succulent grilled chicken is marinated in a blend of spices that bring out a deep, rich flavor. <span class="read-more-toggle">Read more</span></p>
+        <div class="read-more-content">
+          <p>Cooked to perfection, it is served with a side of fresh vegetables and your choice of rice or bread. Our chicken dish is a favorite among regulars, known for its tender meat and flavorful skin. It's a must-try for anyone who loves hearty and delicious meals.</p>
+        </div>
+      </div>
+      <div class="col-md-4 food-item">
+        <h2>Beef</h2>
+        <p>Experience the robust taste of our halal beef, sourced from the finest cuts and cooked to your preference. <span class="read-more-toggle">Read more</span></p>
+        <div class="read-more-content">
+          <p>Our beef is seasoned with a special mix of herbs and spices, then grilled or braised to lock in the juices. Served with a choice of sides including mashed potatoes, grilled vegetables, or a fresh salad, this dish promises a fulfilling and delicious meal.</p>
+        </div>
+      </div>
+      <div class="col-md-4 food-item">
+        <h2>Sushi</h2>
+        <p>Delve into our fresh and vibrant sushi, crafted with the highest quality ingredients. <span class="read-more-toggle">Read more</span></p>
+        <div class="read-more-content">
+          <p>Each piece of sushi is a work of art, combining the freshest fish, perfectly cooked rice, and carefully selected vegetables. Whether you prefer classic rolls or more adventurous combinations, our sushi menu has something for everyone.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 food-item">
+        <h2>Pasta</h2>
+        <p>Our pasta dishes are a celebration of Italian cuisine, made with authentic ingredients and traditional recipes. <span class="read-more-toggle">Read more</span></p>
+        <div class="read-more-content">
+          <p>From creamy Alfredo to tangy Marinara, our pasta is cooked to al dente perfection and tossed with a variety of delicious sauces. Paired with fresh herbs, cheeses, and your choice of toppings, each dish is a symphony of flavors.</p>
+        </div>
+      </div>
+      <div class="col-md-4 food-item">
+        <h2>Salad</h2>
+        <p>Our salads are a fresh and healthy option, packed with a variety of vibrant ingredients. <span class="read-more-toggle">Read more</span></p>
+        <div class="read-more-content">
+          <p>Choose from a range of salads featuring crisp greens, juicy tomatoes, crunchy cucumbers, and more. Topped with your choice of dressing, nuts, or cheese, our salads are as nutritious as they are delicious.</p>
+        </div>
+      </div>
+      <div class="col-md-4 food-item">
+        <h2>Dessert</h2>
+        <p>Indulge in our delectable desserts, a perfect way to end your meal on a sweet note. <span class="read-more-toggle">Read more</span></p>
+        <div class="read-more-content">
+          <p>From rich chocolate cakes to light and airy mousses, our dessert menu offers something for every sweet tooth. Each dessert is crafted with care, using the finest ingredients to ensure a delightful finish to your dining experience.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.read-more-toggle').on('click', function() {
+        $(this).next('.read-more-content').slideToggle();
+        $(this).text($(this).text() === 'Read more' ? 'Read less' : 'Read more');
+      });
+    });
+  </script>
+</body>
+
+</html>
